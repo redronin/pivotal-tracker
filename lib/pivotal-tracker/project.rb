@@ -19,7 +19,6 @@ module PivotalTracker
     element :id, Integer
     element :name, String
     element :account, String
-    element :week_start_day, String
     element :point_scale, String
     element :week_start_day, String
     element :velocity_scheme, String
@@ -28,6 +27,9 @@ module PivotalTracker
     element :current_velocity, Integer
     element :last_activity_at, DateTime
     element :use_https, Boolean
+    element :labels, String
+    element :start_date, DateTime
+    
 
     def activities
       @activities ||= Proxy.new(self, Activity)
